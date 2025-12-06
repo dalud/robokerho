@@ -8,7 +8,7 @@ conf = configparser.ConfigParser()
 conf.read('/home/pi/robokerho/config')
 
 # Select robo
-robo = conf.get('env', 'robo')
+robo: str = conf.get('env', 'robo')
 if(robo == 'ile'):
     robo = Ile()    
 elif(robo == 'marina'):

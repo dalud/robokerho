@@ -11,7 +11,8 @@ from subprocess import Popen, PIPE
 import signal
 
 wlan = Wlan()
-dir = '/home/pi/robokerho/samples/transcripts/'
+#dir = '/home/pi/robokerho/samples/transcripts/'
+dir = 'C:/robokerho/samples/transcripts/kiina/'
 texts = os.listdir(dir)
 print(texts)
 root = Tk()

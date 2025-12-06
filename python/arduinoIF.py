@@ -15,7 +15,7 @@ class Arduino:
                     print(port)
                 self.arduino = serial.Serial(str(list_ports.comports()[self.i]).split()[0], 9600, timeout=1)
                 #self.arduino = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
-                print('Arduino:', arduino)
+                print('Arduino:', self.arduino)
             except:
                 print('Connecting Arduino via USB. i =', self.i)
                 self.i += 1

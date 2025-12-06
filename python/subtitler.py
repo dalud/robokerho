@@ -9,7 +9,8 @@ import signal
 
 wlan = Wlan()
 flush = sys.stdout.flush
-dir = '/home/pi/robokerho/samples/transcripts/'
+#dir = '/home/pi/robokerho/samples/transcripts/'
+dir = "C:/robokerho/samples/transcripts/kiina/"
 texts = os.listdir(dir)
 br = 10 # How many line breaks to clr. Set according to font size. Obsolete if padx, pady aet?
 print(texts)
@@ -54,6 +55,7 @@ while True:
                 if time >= comp-0: # set reduction value to match wlan print lag
                     line = lines.pop(0)
                     print(line.split(':')[1])
+                    print("\n"*br)
                     flush()
                 if line.split(':')[1] == '':
                     print("Last line, yo!")
